@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <ul id="add">
+      <li id="intro">list-1</li>
+      <li>list-2</li>
+      <li>list-3</li>
+      <li>list-4</li>
+    </ul>
+
+    <ul>
+      <li id="intr">list-A</li>
+      <li>list-B</li>
+      <li>list-C</li>
+    </ul>
+
+    <div id="trac">
+      <p>para-1</p>
+      <p>para-2</p>
+      <p>para-3</p>
+      <p>para-4</p>
+
+      <div></div>
+    </div>
+  </body>
+
+  <script>
+  //find div on which add new element
+  const  addItem = document.getElementById("trac");
+  // create new element 
+  const newelemnt = document.createElement("b");
+  //create text node for add text
+  const tnode = document.createTextNode("this is a new item add in the existing element");
+  //add this node in newElent
+  newelemnt.appendChild(tnode);
+  //this addnode add in addItem element
+  addItem.appendChild(newelemnt);
+   
     
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo exercitationem cum cumque velit quaerat laborum eos, officiis enim voluptatum qui.</p>
-
-
-    <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eveniet?</h1>
-</body>
+  </script>
 </html>
