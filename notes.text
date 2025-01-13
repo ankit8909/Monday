@@ -1,0 +1,2 @@
+document.body.appendChild kya karta hai? (Hindi me Samajhiye)
+document.body.appendChild JavaScript ka ek method hai jo DOM ke kisi element ko HTML page ke body ke end me add karta hai. Ye method kisi naye ya existing HTML element ko parent element (is case me document.body) ke child ke roop me insert karta hai.
