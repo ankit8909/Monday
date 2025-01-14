@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport"content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -22,35 +22,73 @@
     </ul>
 
     <div id="trac">
-      <p>para-1</p>
+      <p id="tracc">para-1</p>
       <p>para-2</p>
       <p>para-3</p>
       <p>para-4</p>
 
       <div></div>
     </div>
+
+    <!-- for clone  -->
+    <ul id="cl">
+      <li>list__1</li>
+      <li>list__2</li>
+      <li>list__3</li>
+      <li>list__4</li>
+    </ul>
+
+    <!-- for clone  -->
+
+<!-- for replace -->
+    <ul id="cl">
+        <li>list__1</li>
+        <li>list__2</li>
+        <li>list__3</li>
+        <li>list__4</li>
+      </ul>
+
   </body>
 
+
+  <!-- ==============================inserAdjacent -->
+   <div id="insrt">
+    <h2>pading</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+   </div>
+  <script src="index.js"></script>
+
   <script>
-  //find div on which add new element
-  const  addItem = document.getElementById("trac");
-  // create new element 
-  const newelemnt = document.createElement("b");
-  //create text node for add text
-  const tnode = document.createTextNode("this is a new item add in the existing element");
-  //add this node in newElent
-  newelemnt.appendChild(tnode);
-  //this addnode add in addItem element
-  addItem.appendChild(newelemnt);
-  //add  on or more than one classname in element
-  newelemnt.className = "try  pi ";
-  //set id in element 
-  newelemnt.id = 'myid';
+    //find div on which add new element
+    const addItem = document.getElementById("trac");
+    // create new element
+    const newelemnt = document.createElement("b");
+    //create text node for add text
+    const tnode = document.createTextNode(
+      "this is a new item add in the existing element"
+    );
+    //add this node in newElent
+    newelemnt.appendChild(tnode);
+    //this addnode add in addItem element
+    addItem.appendChild(newelemnt);
+    //add  on or more than one classname in element
+    newelemnt.className = "try  pi ";
+    //set id in element
+    newelemnt.id = "myid";
 
-  document.body.appendChild(newelemnt);
+    document.body.appendChild(newelemnt);
 
+    //add text by textContent Method()
+    const id = document.getElementById("tracc");
+    console.log(id.textContent);
 
-   
-    
+    // =========================add new dive and add Insert Before first element==============================
+
+    const findid = document.getElementById("trac");
+    const newElement1 = document.createElement("h1");
+    newelemnt.textContent = "add file";
+    //    const pp = findid.firstChild;
+    const pp = findid.firstElementChild.nextElementSibling;
+    findid.insertBefore(newelemnt, pp);
   </script>
 </html>
